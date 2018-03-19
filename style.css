@@ -1,0 +1,584 @@
+/*CSS RESET*/
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/*Bramwell CSS Begin*/
+
+/*Global Styles*/
+html{
+    background-image: url(Images/background.jpg);
+    background-repeat: repeat;
+}
+body{
+    width: 100%;
+    font-family: 'Avenir', 'Helvetica', sans-serif;
+    color: #473730;
+}
+main{
+    overflow: hidden;
+}
+/*Header Global*/
+h1{
+    display: none;
+}
+header{
+    width: 100%;
+    margin-top: .25em;
+}
+.logo{
+    width: 50%;
+    max-width: 500px;
+    display: block;
+    margin: 0 auto;
+}
+nav{
+    color: #507796;
+    text-decoration: none;
+    margin-bottom: .5em;
+}
+nav a{
+    color: #344b63;
+    text-decoration: none;
+    font-weight: bold;
+    padding: .2em .4em;
+}
+#current{
+    color: #d4bd96;
+    background-color: #473730;
+    border-radius: 5px;
+}
+nav h2{
+    display: none;
+}
+#toggle{
+    display:none;
+}
+/*footer global*/
+footer{
+    background-color: #473730;
+    color: #507796;
+    align-content: center;
+    text-align: center;
+    padding: .5em 0;
+    overflow: auto;
+}
+footer a img{
+    margin-top: .5em;
+    width: 80px;
+}
+footer a{
+    color: #507796;
+    text-align: center;
+    padding: .5em 0;
+}
+/*home Global*/
+#melHome{
+    width: 90%;
+    display: block;
+    margin: 0 auto;
+    border-radius: 5px;
+    max-width: 1200px;
+}
+main a, main button{
+    background-color: #344b63;
+    color: #d4bd96;
+    text-decoration: underline;
+    width: 50%;
+    border: 1px solid #344b63;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 1.4em;
+    padding: .2em;
+    box-sizing: content-box;
+    margin: .25em auto;
+    cursor: auto;
+    }
+button img{
+    width: 1em;
+    margin-right: .2em;
+}
+main p{
+    width: 85%;
+    text-align: center;
+    display: block;
+    margin: .5em auto;
+    line-height: 115%;
+}
+.homeButton:hover{
+        background-color: #507796;
+    }
+/*Interior Global*/
+.title{
+    display: none;
+}
+.aboutImg{
+    width: 80%;
+}
+.albumImg{
+    margin: .5em auto;
+    border-radius: .5em;
+}
+.album{
+    font-weight: bold;
+    color: #344B63;
+    text-align: center;
+    font-size: 2.3em;
+    margin-top: .5em;
+}
+#EP button, #solitude button{
+    background-color: #507796;
+    border: 1px solid #507796;
+}
+#EP h4, #solitude h4{
+    font-size: 1.5em;
+}
+#photos img{
+    display: block;
+}
+iframe{
+    width: 90%;
+    height: 600px;
+    display: block;
+    margin: .5em auto;
+}
+.contact{
+    font-weight: bold;
+    color: #344B63;
+    font-size: 1.5em;
+}
+#contact{
+    border: 5px solid #344B63;
+    border-radius: 5px;
+}
+.contactButton{
+    width: 90%;
+    margin-bottom: 1em;
+}
+#contactImg{
+    margin-bottom: 5em;
+}
+/*MOBILE ONLY STYLES*/
+@media screen and (min-width: 20em) and (max-width: 40em){
+    /*dropdown Menu*/
+    #menuItems li{
+        display: block;
+        width: 100%;
+        text-align: center;
+    }
+    #menuItems li a{
+        display: block;
+        margin: .5em;
+        font-size: 1.5em;
+    }
+    #toggle a{
+        font-size: 1.5em;
+    }
+    #toggle{
+        display: block;
+        margin: 0 auto;
+        text-align: center;
+    }
+    #menuItems{
+        display:none;
+    }
+    .closeMenu{
+        display:none;
+    }
+    #menu:target #menuItems{
+        display: block;
+    }
+    #menu:target .openMenu{
+        display: none;
+    }
+    #menu:target .closeMenu{
+        display: block;
+    }
+    .homeP{
+        font-size: 1.25em;
+    }
+    /*Home Mobile*/
+    main a, main button{
+        display: block;
+    }
+    footer a img{
+        width: 10%;
+    }
+    /*About Mobile*/
+    .aboutImg{
+        width: 90%;
+        background-color: red;
+        display: block;
+        margin: 0 auto;
+    }
+    /*Music Mobile*/
+    #EP, #solitude{
+        text-align: center;
+    }
+    .buttons{
+        display: block;
+        margin: 0 auto;
+        width: 50%;
+        text-align: center;
+    }
+    #EP button, #solitude button{
+        width:40%;
+    }
+    #EP h4, #solitude h4{
+        margin: 0 auto;
+    }
+    .albumImg{
+        width:90%;
+        margin: 0 5%;
+    }
+    /*photos mobile*/
+    #photos img{
+        width: 90%;
+        margin: .25em auto;
+    }
+    /*Contact Page*/
+    .contact{
+        text-align: center;
+        margin: .8em auto;
+    }
+    #contact{
+        width: 90%;
+        margin: .5em auto;
+        margin-bottom: 2em;
+    }
+    #contactImg{
+        width: 100%;
+    }
+    
+    iframe{
+        height: 600px;
+    }
+    form{
+        text-align: center;
+        border: 3px solid #473730;
+        border-radius: 5px;
+        width: 80%;
+        margin: 1em auto;
+    }
+    form label, form input{
+        display: block;
+        margin: .25em auto;
+        line-height: 120%;
+    }
+    #submit{
+        margin: 1em auto;
+        background-color: #344B63;
+        color: #D4BD96;
+        font-size: 1.2em;
+    }
+}
+/*Tablet Styles*/
+@media screen and (min-width: 40em) and (max-width: 64em){
+    /*Home Page*/
+     nav{
+        text-align: center;
+    }
+    nav li{
+        display: inline-block;
+        font-size: 1.6em;
+        margin: .09em;
+    }
+    .homeButton{
+        display: inline-block;
+        width: 40%;
+        box-sizing: content-box;
+        font-size: 1.5em;
+        line-height: 110%;
+    }
+    button img{
+        width: .5em;
+    }
+    .homeP{
+        font-size: 1.5em;
+    }
+    aside{
+        text-align: center;
+    }
+    footer a img{
+        margin: .5em .25em;
+        width: 50px;
+    }
+    /*About Page*/
+    .aboutP{
+        font-size: 1.2em;
+        text-align: left;
+        text-indent: 3em;
+        line-height: 130%;
+        width: 80%;
+    }
+    .aboutImg{
+        display: inline;
+        width: 40%;
+        float: left;
+        margin: .25em;
+        margin-left: 10%;
+        clear: both;
+    }
+    /*Music Tablet*/
+    #EP h3, #solitude h3{
+        clear: both;
+    }
+    .albumImg{
+        clear: both;
+        float: left;
+        width: 30%;
+        margin: 1% 1% 1% 19%;
+    }
+    .songs{
+        width:50%;
+        overflow: hidden;
+        padding-top: 1%;
+    }
+    #EP button, #solitude button{
+        clear: both;
+        float: left;
+        background-color: #507796;
+        border: 1px solid #507796;
+        width: 20%;
+    }
+    #EP h4, #solitude h4{
+        font-size: 1.5em;
+        float: left;
+        margin: .5em 0em;
+        padding-left: 1%;
+    }
+    /*Photos Page*/
+    #photos img{
+        width: 40%;
+        float: left;
+        margin: 1em 5%;
+    }
+    /*Contact Page*/
+    .contact{
+        text-align: center;
+        margin: 1em auto;
+    }
+    .contact a{
+        font-size: 1em;
+        margin: 1em;
+    }
+    #contactImg{
+        width: 40%;
+        float: left;
+        margin: 0 5%;
+    }
+    #contact{
+        float: left;
+        width: 38%;
+        margin: .5em 5%;
+        text-align: center;
+        overflow: hidden;
+        padding-top: .5em;
+        padding-bottom: 1em;
+    }
+    .contactButton{
+        font-size: 1.2em;
+    }
+    /*Form Page*/
+    form{
+        text-align: center;
+        border: 3px solid #473730;
+        border-radius: 5px;
+        width: 80%;
+        margin: 1em auto;
+    }
+    form label, form input{
+        display: block;
+        margin: .25em auto;
+        line-height: 120%;
+    }
+    #submit{
+        margin: 1em auto;
+        background-color: #344B63;
+        color: #D4BD96;
+        font-size: 1.2em;
+    }
+}
+/*Desktop Styles*/
+@media screen and (min-width: 64em){
+/*Home Desktop*/
+    nav{
+        text-align: center;
+    }
+    nav li{
+        display: inline-block;
+        font-size: 1.8em;
+        margin: .2em .5em;
+    }
+    .homeP{
+        font-size: 1.5em;
+    }
+    .homeButton{
+        display: inline-block;
+        width: 40%;
+        box-sizing: content-box;
+        font-size: 1.5em;
+        line-height: 110%;
+        cursor: pointer;
+        margin: .5em;
+    }
+    button img{
+        width: .5em;
+    }
+    aside{
+        text-align: center;
+    }
+    footer a img{
+        margin: .5em .25em;
+        width: 50px;
+    }
+    /*About Page*/
+    .aboutP{
+        font-size: 1.2em;
+        text-align: left;
+        text-indent: 3em;
+        line-height: 130%;
+        width: 80%;
+    }
+    .aboutImg{
+        display: inline;
+        width: 40%;
+        float: left;
+        margin: .25em;
+        margin-left: 10%;
+        clear: both;
+    }
+    .aboutMain{
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+    /*Music Page*/
+    #EP h3, #solitude h3{
+        clear: both;
+    }
+    .albumImg{
+        clear: both;
+        float: left;
+        width: 30%;
+        margin: 1% 1% 1% 19%;
+    }
+    .songs{
+        width:50%;
+        overflow: hidden;
+        padding-top: 1%;
+    }
+    #EP button, #solitude button{
+        clear: both;
+        float: left;
+        background-color: #507796;
+        border: 1px solid #507796;
+        width: 20%;
+    }
+    #EP h4, #solitude h4{
+        font-size: 1.5em;
+        float: left;
+        margin: .5em 0em;
+        padding-left: 1%;
+    }
+    /*Photos Page*/
+    #photos img{
+        width: 30%;
+        float: left;
+        margin: 1em 1.66%;
+    }
+    #photos{
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+    /*Contact Page*/
+    .contactMain{
+        max-width: 1300px;
+        margin: 0 auto;
+    }
+    .contact{
+        text-align: center;
+        margin: 1em auto;
+    }
+    .contact a{
+        font-size: 1em;
+        margin: 1em;
+    }
+    #contactImg{
+        width: 40%;
+        float: left;
+        margin: .5em 5%;
+    }
+    #contact{
+        float: left;
+        width: 38%;
+        margin: .5em 5%;
+        text-align: center;
+        overflow: hidden;
+        padding-top: .5em;
+        padding-bottom: 1em;
+    }
+    /*Form Page*/
+    form{
+        text-align: center;
+        border: 3px solid #473730;
+        border-radius: 5px;
+        width: 60%;
+        margin: 1em auto;
+    }
+    form label, form input{
+        display: block;
+        margin: .25em auto;
+        line-height: 120%;
+    }
+    #submit{
+        margin: 1em auto;
+        background-color: #344B63;
+        color: #D4BD96;
+        font-size: 1.2em;
+    }
+}
